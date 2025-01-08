@@ -11,7 +11,7 @@ def base() -> None:
     file_path = os.path.join(script_dir, 'Result.txt')  # Naming
 
     # Youtube Vid parameter
-    video_id = 'KRjyYh9Fd5w'
+    video_id = 'igU5TQwosYg'
 
     # String holder
     transcript_string = ''
@@ -95,8 +95,8 @@ def process_vid(video_id: str) -> None:
 
         # Get the video transcript
         try:
-            transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
-            print("English transcript retrieved.")
+            transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=["es"])
+            print("Spanish transcript retrieved.")
 
         except Exception as e:
             print(f"Error when trying to retrieve English transcript: {e}")
@@ -132,6 +132,6 @@ def process_vid(video_id: str) -> None:
 # Safeguard clause
 if __name__ == "__main__":
 
-    video_id = "KRjyYh9Fd5w"  # Replace with your desired video ID
+    video_id = "igU5TQwosYg"  # Replace with your desired video ID
     process_vid(video_id)
 
